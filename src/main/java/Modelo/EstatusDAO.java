@@ -5,7 +5,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import javax.swing.JOptionPane;
 
 public class EstatusDAO {
@@ -159,6 +161,32 @@ public class EstatusDAO {
         }
 
         return estatusList; // Devolver la lista poblada correctamente
+    }
+    
+    public static Map<Integer, String> obtenerMapaNombresYIdsEstatus() {
+        Map<Integer, String> mapaNombresYIdsEstatus = new HashMap<>();
+
+        Conexion objetoConexion = Conexion.obtenerInstancia();
+        String consulta = "SELECT id_estatus, estatus FROM Estatus"; // Ajusta el nombre de la tabla según corresponda en tu base de datos
+
+        try {
+            Statement statement = objetoConexion.estableceConexion().createStatement();
+            ResultSet rs = statement.executeQuery(consulta);
+
+            while (rs.next()) {
+                int id_estatus = rs.getInt("id_estatus");
+                String nombreEstatus = rs.getString("estatus");
+                mapaNombresYIdsEstatus.put(id_estatus, nombreEstatus);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Error al obtener datos de la base de datos", "Error", JOptionPane.ERROR_MESSAGE);
+        } finally {
+            objetoConexion.closeConnection();
+        }
+
+        return mapaNombresYIdsEstatus;
     }
 
 }

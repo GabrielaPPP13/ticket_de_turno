@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
 public class IndexController {
 
    private Index vista;
-    private String turnoTicket; // Variable para almacenar el turno_ticket
+    private String turnoTicket; 
 
     public IndexController(Index vista) {
         this.vista = vista;
@@ -45,7 +45,7 @@ public class IndexController {
     }
 
     private void consultarTodosLosTramites() {
-        String curp = vista.txt_curp_consulta.getText(); // Obtener el CURP del campo de texto
+        String curp = vista.txt_curp_consulta.getText(); 
 
         // Verificar que el campo CURP no esté vacío
         if (curp.isEmpty()) {
