@@ -2,6 +2,7 @@ package Modelo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class Conexion {
@@ -45,5 +46,9 @@ public class Conexion {
                 System.out.println("Error al cerrar la conexión: " + e.toString());
             }
         }
+    }
+
+    PreparedStatement prepareStatement(String query) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

@@ -190,4 +190,8 @@ public class MunicipioDAO {
     return mapaNombresYIds;
 }
 
+    public static String obtenerIdMunicipio(String municipio) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 }

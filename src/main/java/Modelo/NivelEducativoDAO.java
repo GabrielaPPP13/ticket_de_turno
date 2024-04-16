@@ -189,4 +189,18 @@ public class NivelEducativoDAO {
     return mapaNombresYIdsNiveles;
 }
 
+ public static int obtenerIdNivel(String nombreNivel) {
+    List<NivelEducativo> nivelesEducativos = obtenerTodosNivelEducativo();
+
+    // Buscar el ID del nivel educativo a partir del nombre
+    for (NivelEducativo nivel : nivelesEducativos) {
+        if (nivel.getNivel_educativo().equals(nombreNivel)) {
+            return nivel.getId_nivel_educativo();
+        }
+    }
+
+    // Si no se encuentra el nivel educativo, devuelve -1 o lanza una excepción según lo que prefieras
+    return -1; // O lanza una excepción indicando que el nivel educativo no fue encontrado
+}
+
 }

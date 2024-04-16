@@ -100,7 +100,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="btnEstatus" min="-2" pref="130" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jButton8" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="btnResponsable" min="-2" pref="130" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -135,7 +135,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnEstatus" alignment="3" min="-2" pref="78" max="-2" attributes="0"/>
-                          <Component id="jButton8" alignment="3" min="-2" pref="78" max="-2" attributes="0"/>
+                          <Component id="btnResponsable" alignment="3" min="-2" pref="78" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
                   </Group>
@@ -157,6 +157,9 @@
                 <Property name="text" type="java.lang.String" value="INICIO"/>
                 <Property name="horizontalAlignment" type="int" value="2"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JButton" name="btnRol">
               <Properties>
@@ -172,6 +175,9 @@
                 <Property name="text" type="java.lang.String" value="ROLES"/>
                 <Property name="horizontalAlignment" type="int" value="2"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JButton" name="btnNivel">
               <Properties>
@@ -187,6 +193,9 @@
                 <Property name="text" type="java.lang.String" value="NIVEL"/>
                 <Property name="horizontalAlignment" type="int" value="2"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JButton" name="btnServicio">
               <Properties>
@@ -202,6 +211,9 @@
                 <Property name="text" type="java.lang.String" value="SERVICIO"/>
                 <Property name="horizontalAlignment" type="int" value="2"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JButton" name="btnTramites">
               <Properties>
@@ -217,6 +229,9 @@
                 <Property name="text" type="java.lang.String" value="TR&#xc1;MITES"/>
                 <Property name="horizontalAlignment" type="int" value="2"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JButton" name="btnMunicipio">
               <Properties>
@@ -232,6 +247,9 @@
                 <Property name="text" type="java.lang.String" value="MUNICIPIO"/>
                 <Property name="horizontalAlignment" type="int" value="2"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JButton" name="btnEstatus">
               <Properties>
@@ -247,8 +265,11 @@
                 <Property name="text" type="java.lang.String" value="ESTATUS"/>
                 <Property name="horizontalAlignment" type="int" value="2"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton8">
+            <Component class="javax.swing.JButton" name="btnResponsable">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="66" red="0" type="rgb"/>
@@ -262,6 +283,9 @@
                 <Property name="text" type="java.lang.String" value="RESPONSABLE"/>
                 <Property name="horizontalAlignment" type="int" value="2"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="lblTitulo">
               <Properties>

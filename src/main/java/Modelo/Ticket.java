@@ -2,13 +2,13 @@ package Modelo;
 
 public class Ticket {
 
-    String id_ticket, curp, nombre, apellido_paterno, apellido_materno, correo, telefono1, telefono2, municipio, fecha_creacion, fecha_modifiacion, fecha_asignacion;
+    String id_ticket, turno_ticket, curp, nombre, apellido_paterno, apellido_materno, correo, telefono1, telefono2, municipio, fecha_creacion, fecha_modificacion, fecha_asignacion;
     int tramite, nivel_educativo, estatus, responsable;
 
-    public Ticket(String id_ticket, String curp, int responsable, String nombre, String apellido_paterno, String apellido_materno, String correo, String telefono1, String telefono2, String municipio, String fecha_creacion, String fecha_modifiacion, String fecha_asignacion, int tramite, int nivel_educativo, int estatus) {
+        public Ticket(String id_ticket, String turno_ticket, String curp, String nombre, String apellido_paterno, String apellido_materno, String correo, String telefono1, String telefono2, String municipio, String fecha_creacion, String fecha_modificacion, String fecha_asignacion, int tramite, int nivel_educativo, int estatus, int responsable) {
         this.id_ticket = id_ticket;
+        this.turno_ticket = turno_ticket;
         this.curp = curp;
-        this.responsable = responsable;
         this.nombre = nombre;
         this.apellido_paterno = apellido_paterno;
         this.apellido_materno = apellido_materno;
@@ -17,11 +17,12 @@ public class Ticket {
         this.telefono2 = telefono2;
         this.municipio = municipio;
         this.fecha_creacion = fecha_creacion;
-        this.fecha_modifiacion = fecha_modifiacion;
+        this.fecha_modificacion = fecha_modificacion;
         this.fecha_asignacion = fecha_asignacion;
         this.tramite = tramite;
         this.nivel_educativo = nivel_educativo;
         this.estatus = estatus;
+        this.responsable = responsable;
     }
 
     public String getId_ticket() {
@@ -32,20 +33,20 @@ public class Ticket {
         this.id_ticket = id_ticket;
     }
 
+    public String getTurno_ticket() {
+        return turno_ticket;
+    }
+
+    public void setTurno_ticket(String turno_ticket) {
+        this.turno_ticket = turno_ticket;
+    }
+
     public String getCurp() {
         return curp;
     }
 
     public void setCurp(String curp) {
         this.curp = curp;
-    }
-
-    public int getResponsable() {
-        return responsable;
-    }
-
-    public void setResponsable(int responsable) {
-        this.responsable = responsable;
     }
 
     public String getNombre() {
@@ -112,12 +113,12 @@ public class Ticket {
         this.fecha_creacion = fecha_creacion;
     }
 
-    public String getFecha_modifiacion() {
-        return fecha_modifiacion;
+    public String getFecha_modificacion() {
+        return fecha_modificacion;
     }
 
-    public void setFecha_modifiacion(String fecha_modifiacion) {
-        this.fecha_modifiacion = fecha_modifiacion;
+    public void setFecha_modificacion(String fecha_modificacion) {
+        this.fecha_modificacion = fecha_modificacion;
     }
 
     public String getFecha_asignacion() {
@@ -152,4 +153,11 @@ public class Ticket {
         this.estatus = estatus;
     }
 
+    public int getResponsable() {
+        return responsable;
+    }
+
+    public void setResponsable(int responsable) {
+        this.responsable = responsable;
+    }
 }

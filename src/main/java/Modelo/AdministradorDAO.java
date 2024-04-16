@@ -164,4 +164,34 @@ public class AdministradorDAO {
         return administradores;
     }
 
+    
+    public static Administrador validarAdministrador(String userName, String contraseña) {
+    Conexion objetoConexion = Conexion.obtenerInstancia();
+    Administrador administrador = null;
+
+    String consulta = "SELECT id_administrador, user_name, contraseña FROM Administrador WHERE user_name = ? AND contraseña = ?;";
+
+    try {
+        CallableStatement cs = objetoConexion.estableceConexion().prepareCall(consulta);
+        cs.setString(1, userName);
+        cs.setString(2, contraseña);
+        ResultSet rs = cs.executeQuery();
+
+        // Si se encuentra un administrador, crea un objeto Administrador
+        // con los datos obtenidos del ResultSet
+        if (rs.next()) {
+            int id = rs.getInt("id_administrador");
+            administrador = new Administrador(id, userName, contraseña);
+        }
+
+    } catch (SQLException e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(null, "Error al buscar en la base de datos", "Error", JOptionPane.ERROR_MESSAGE);
+    } finally {
+        objetoConexion.closeConnection();
+    }
+
+    return administrador;
+}
+
 }
