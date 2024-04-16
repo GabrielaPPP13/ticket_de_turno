@@ -5,7 +5,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import javax.swing.JOptionPane;
 
 public class MunicipioDAO {
@@ -161,5 +163,31 @@ public class MunicipioDAO {
 
         return municipios;
     }
+
+    public static Map<String, String> obtenerMapaNombresYIdsMunicipios() {
+    Map<String, String> mapaNombresYIds = new HashMap<>();
+
+    Conexion objetoConexion = Conexion.obtenerInstancia();
+    String consulta = "CALL ObtenerTodosMunicipios();";
+
+    try {
+        Statement statement = objetoConexion.estableceConexion().createStatement();
+        ResultSet rs = statement.executeQuery(consulta);
+
+        while (rs.next()) {
+            String idMunicipio = rs.getString("id_municipio");
+            String nombreMunicipio = rs.getString("municipio");
+            mapaNombresYIds.put(nombreMunicipio, idMunicipio);
+        }
+
+    } catch (SQLException e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(null, "Error al obtener datos de la base de datos", "Error", JOptionPane.ERROR_MESSAGE);
+    } finally {
+        objetoConexion.closeConnection();
+    }
+
+    return mapaNombresYIds;
+}
 
 }

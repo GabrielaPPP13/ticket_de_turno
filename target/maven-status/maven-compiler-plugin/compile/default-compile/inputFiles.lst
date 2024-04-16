@@ -8,8 +8,8 @@ C:\Users\abiga\Documents\Arquitectura de software\ticket_de_turno\src\main\java\
 C:\Users\abiga\Documents\Arquitectura de software\ticket_de_turno\src\main\java\Modelo\MunicipioDAO.java
 C:\Users\abiga\Documents\Arquitectura de software\ticket_de_turno\src\main\java\Modelo\NivelEducativoDAO.java
 C:\Users\abiga\Documents\Arquitectura de software\ticket_de_turno\src\main\java\Modelo\Administrador.java
+C:\Users\abiga\Documents\Arquitectura de software\ticket_de_turno\src\main\java\Controlador\TicketController.java
 C:\Users\abiga\Documents\Arquitectura de software\ticket_de_turno\src\main\java\Vista\VistaAdminNivelEducativo.java
-C:\Users\abiga\Documents\Arquitectura de software\ticket_de_turno\src\main\java\Vista\VistaRegistroUsuario.java
 C:\Users\abiga\Documents\Arquitectura de software\ticket_de_turno\src\main\java\Controlador\EstatusController.java
 C:\Users\abiga\Documents\Arquitectura de software\ticket_de_turno\src\main\java\Controlador\MunicipioController.java
 C:\Users\abiga\Documents\Arquitectura de software\ticket_de_turno\src\main\java\Controlador\AdminController.java
@@ -27,4 +27,5 @@ C:\Users\abiga\Documents\Arquitectura de software\ticket_de_turno\src\main\java\
 C:\Users\abiga\Documents\Arquitectura de software\ticket_de_turno\src\main\java\Controlador\TramiteController.java
 C:\Users\abiga\Documents\Arquitectura de software\ticket_de_turno\src\main\java\Modelo\TicketDAO.java
 C:\Users\abiga\Documents\Arquitectura de software\ticket_de_turno\src\main\java\Vista\VistaAdminIndex.java
+C:\Users\abiga\Documents\Arquitectura de software\ticket_de_turno\src\main\java\Vista\VistaRegistroTicket.java
 C:\Users\abiga\Documents\Arquitectura de software\ticket_de_turno\src\main\java\Vista\VistaAdminTramite.java

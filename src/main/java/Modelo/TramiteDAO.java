@@ -5,7 +5,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import javax.swing.JOptionPane;
 
 public class TramiteDAO {
@@ -159,6 +161,32 @@ public class TramiteDAO {
         }
 
         return tramites;
+    }
+    
+       public static Map<Integer, String> obtenerMapaNombresYIdsTramites() {
+        Map<Integer, String> mapaNombresYIdsTramites = new HashMap<>();
+
+        Conexion objetoConexion = Conexion.obtenerInstancia();
+        String consulta = "CALL ObtenerTodosTramites();";
+
+        try {
+            Statement statement = objetoConexion.estableceConexion().createStatement();
+            ResultSet rs = statement.executeQuery(consulta);
+
+            while (rs.next()) {
+                int id_tramite = rs.getInt("id_tramite");
+                String nombreTramite = rs.getString("tramite");
+                mapaNombresYIdsTramites.put(id_tramite, nombreTramite);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Error al obtener datos de la base de datos", "Error", JOptionPane.ERROR_MESSAGE);
+        } finally {
+            objetoConexion.closeConnection();
+        }
+
+        return mapaNombresYIdsTramites;
     }
 
 }

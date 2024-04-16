@@ -5,7 +5,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import javax.swing.JOptionPane;
 
 public class NivelEducativoDAO {
@@ -160,5 +162,31 @@ public class NivelEducativoDAO {
 
         return nivelesEducativos;
     }
+
+    public static Map<String, Integer> obtenerMapaNombresYIdsNiveles() {
+    Map<String, Integer> mapaNombresYIdsNiveles = new HashMap<>();
+
+    Conexion objetoConexion = Conexion.obtenerInstancia();
+    String consulta = "CALL ObtenerTodosNivelesEducativos();";
+
+    try {
+        Statement statement = objetoConexion.estableceConexion().createStatement();
+        ResultSet rs = statement.executeQuery(consulta);
+
+        while (rs.next()) {
+            int id_nivel_educativo = rs.getInt("id_nivel_educativo");
+            String nivel_educativo = rs.getString("nivel_educativo");
+            mapaNombresYIdsNiveles.put(nivel_educativo, id_nivel_educativo);
+        }
+
+    } catch (SQLException e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(null, "Error al obtener datos de la base de datos", "Error", JOptionPane.ERROR_MESSAGE);
+    } finally {
+        objetoConexion.closeConnection();
+    }
+
+    return mapaNombresYIdsNiveles;
+}
 
 }
